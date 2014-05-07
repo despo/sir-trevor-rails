@@ -1,17 +1,17 @@
 # Sir Trevor Rails
 
-A Rails gem for integrating the Sir Trevor JS into your Rails 3.x application. 
+A Rails gem for integrating the Sir Trevor JS into your Rails 4.x application.
 
 # Usage
 
-Add Sir Trevor to your Gemfile 
+Add Sir Trevor to your Gemfile
 
 ```ruby
 gem 'sir-trevor-rails'
 ```
 
 ```bash
-bundle install 
+bundle install
 ```
 
 Require SirTrevor in your `application_controller.rb`
@@ -38,7 +38,7 @@ In your view file for your editable content (must be a 'text' field as we store 
 f.sir_trevor_text_area :content
 ```
 
-And instantiate a new `SirTrevor.Editor` instance in your Javascript. 
+And instantiate a new `SirTrevor.Editor` instance in your Javascript.
 
 ```javascript
 $(function(){
@@ -52,12 +52,12 @@ Or for multiple instances:
 $(function(){
   var instances = $('.sir-trevor-area'),
       l = instances.length, instance;
-  
+
   while (l--) {
     instance = $(instances[l]);
     new SirTrevor.Editor({ el: instance });
   }
-  
+
 });
 ```
 
@@ -83,13 +83,13 @@ This will copy all of the SirTrevor block partials into `app/views/sir-trevor/bl
 
 # Handling image uploads
 
-We don't provide a default image uploader out of the box, because everyone will have different requirements. Until we provide a full example project, have a look at [this gist](https://gist.github.com/cjbell88/7091537) which allows uploads using CarrierWave and Fog (for S3). 
+We don't provide a default image uploader out of the box, because everyone will have different requirements. Until we provide a full example project, have a look at [this gist](https://gist.github.com/cjbell88/7091537) which allows uploads using CarrierWave and Fog (for S3).
 
 # Helper methods
 
 **`render_sir_trevor`**
 
-Parses the blocks JSON content, loops through each piece of block content and render the appropriate partial for the block. 
+Parses the blocks JSON content, loops through each piece of block content and render the appropriate partial for the block.
 
 **`render_sir_trevor_image`**
 
@@ -105,13 +105,13 @@ Get the first instance of a specified SirTrevor block type from the supplied JSO
 
 # Requirements
 
-- Rails 3.x  
+- Rails 4.x
 - jQuery
 - Underscore.js (bundled)
 
 # To do
 
-- Add tests 
+- Add tests
 
 # Licence
 
